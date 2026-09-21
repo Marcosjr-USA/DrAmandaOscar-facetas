@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23151d1c'/%3E%3Cpath d='M21 14c-8 4-7 16-3 25 3 8 6 12 9 11 3-1 1-12 5-12s2 11 5 12c3 1 6-3 9-11 4-9 5-21-3-25-5-3-8 2-11 2s-6-5-11-2z' fill='none' stroke='%23d9b57b' stroke-width='3'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
+  <!-- Meta Pixel 846286085159032 e Google Analytics G-TT9HKR2DH5:
+       carregados por script.js somente após consentimento. Google Ads não configurado. -->
 </head>
 <body>
   <header class="nav">
@@ -39,6 +41,7 @@
           <a class="button button-gold" href="https://app.simplesdental.com/simples/agendamento/dramandaoscar" target="_blank" rel="noopener">Agendar agora <span>↗</span></a>
           <a class="button button-outline" href="https://wa.me/5527992629598?text=Olá%2C%20Dra.%20Amanda!%20Quero%20agendar%20uma%20avaliação%20para%20facetas%20em%20resina." target="_blank" rel="noopener">Falar no WhatsApp</a>
         </div>
+        <p class="clinical-note">A avaliação clínica é indispensável para definir o planejamento e a quantidade de facetas indicada para você.</p>
       </div>
       <div class="hero-note"><span>01</span><p>Estética que parece<br>ter nascido com você.</p></div>
     </section>
@@ -97,17 +100,56 @@
       </ol>
     </section>
 
+    <section class="faq" id="duvidas" aria-labelledby="faq-title">
+      <div class="faq-intro"><p class="eyebrow dark">Dúvidas frequentes</p><h2 id="faq-title">Tudo começa com uma boa conversa.</h2><p>As respostas abaixo são gerais. Na avaliação, a Dra. Amanda poderá orientar você de acordo com a sua saúde bucal e seus objetivos.</p></div>
+      <div class="faq-list">
+        <details><summary>O procedimento dói?</summary><p>O conforto varia de pessoa para pessoa e conforme o planejamento. A necessidade de anestesia e os cuidados adequados são avaliados individualmente pela dentista.</p></details>
+        <details><summary>É necessário desgastar os dentes?</summary><p>Depende do caso. Algumas situações podem exigir preparo da superfície dental; a necessidade e a extensão só podem ser definidas após uma avaliação clínica.</p></details>
+        <details><summary>Quanto tempo duram as facetas em resina?</summary><p>A durabilidade não é igual para todos. Hábitos, higiene, mordida e acompanhamento profissional influenciam a conservação das facetas.</p></details>
+        <details><summary>As facetas precisam de manutenção?</summary><p>Sim. Revisões periódicas e cuidados diários são importantes. A frequência e eventuais ajustes ou polimentos serão orientados conforme o seu caso.</p></details>
+      </div>
+    </section>
+
     <section class="final-cta">
       <div class="monogram">AO</div>
       <p class="eyebrow">Seu novo sorriso começa aqui</p>
       <h2>Pronta para sorrir<br><em>com mais confiança?</em></h2>
       <p>Agende sua avaliação e descubra o que pode ser planejado para você.</p>
       <div class="final-actions"><a class="button button-gold" href="https://app.simplesdental.com/simples/agendamento/dramandaoscar" target="_blank" rel="noopener">Agendamento imediato <span>↗</span></a><a class="button button-outline" href="https://wa.me/5527992629598?text=Olá%2C%20Dra.%20Amanda!%20Quero%20agendar%20uma%20avaliação%20para%20facetas%20em%20resina." target="_blank" rel="noopener">Falar no WhatsApp</a></div>
+      <p class="clinical-note">A avaliação clínica é indispensável para definir o planejamento e a quantidade de facetas indicada para você.</p>
     </section>
   </main>
 
-  <footer><p>Dra. Amanda Oscar - Dentista · CRO 10822</p><a href="https://wa.me/5527992629598" target="_blank" rel="noopener">WhatsApp</a></footer>
-  <a class="whatsapp" href="https://wa.me/5527992629598?text=Olá%2C%20Dra.%20Amanda!%20Quero%20agendar%20uma%20avaliação%20para%20facetas%20em%20resina." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">✦</a>
+  <footer><p>Dra. Amanda Oscar - Dentista · CRO 10822</p><a href="https://wa.me/5527992629598" target="_blank" rel="noopener">WhatsApp</a><button type="button" id="privacy-settings">Preferências de privacidade</button></footer>
+  <div class="consent-banner" id="consent-banner" hidden role="region" aria-label="Preferências de publicidade">
+    <p><strong>Sua privacidade importa.</strong> Podemos usar Meta e Google Analytics para medir visitas e melhorar esta página? Sua escolha não altera o acesso ao conteúdo ou ao agendamento.</p>
+    <div><button type="button" id="accept-tracking">Aceitar medição</button><button type="button" id="reject-tracking">Continuar sem medição</button></div>
+  </div>
+  <a class="whatsapp" href="https://wa.me/5527992629598?text=Olá%2C%20Dra.%20Amanda!%20Quero%20agendar%20uma%20avaliação%20para%20facetas%20em%20resina." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 .8A15.1 15.1 0 0 0 2.9 23.4L.8 31.2l8-2.1A15.2 15.2 0 1 0 16 .8Zm0 27.6a12.5 12.5 0 0 1-6.4-1.8l-.5-.3-4.7 1.2 1.3-4.5-.3-.5A12.5 12.5 0 1 1 16 28.4Zm6.9-9.3c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.5-.2.2-.4.3-.8.1a10.3 10.3 0 0 1-5.1-4.5c-.4-.7.4-.7 1-1.9.1-.2.1-.5 0-.7l-1.2-2.9c-.3-.7-.6-.6-.8-.6h-.7c-.3 0-.7.1-1.1.5-.4.5-1.4 1.4-1.4 3.3s1.5 3.7 1.7 4c.3.2 2.9 4.4 7 6.2 2.6 1.1 3.6 1.2 4.8 1 1.5-.2 2.2-1 2.5-1.8.3-.8.3-1.5.2-1.7-.1-.2-.4-.3-.8-.5Z"/></svg></a>
+  <div class="exit-modal" id="exit-modal" hidden>
+    <div class="exit-backdrop" data-close-modal></div>
+    <div class="exit-panel" role="dialog" aria-modal="true" aria-labelledby="exit-title" aria-describedby="exit-description" tabindex="-1">
+      <button class="exit-close" type="button" data-close-modal aria-label="Fechar formulário">×</button>
+      <p class="eyebrow dark">Uma conversa pode ser o primeiro passo</p>
+      <h2 id="exit-title">Quer receber condições exclusivas?</h2>
+      <p id="exit-description">Faça seu cadastro e não perca essa oportunidade! As opções e valores dependem de uma avaliação clínica individual.</p>
+      <form id="lead-form" method="post">
+        <label>Nome completo <input name="nome" autocomplete="name" required maxlength="120"></label>
+        <label>Telefone / WhatsApp <input name="telefone" type="tel" autocomplete="tel" inputmode="tel" required minlength="10" maxlength="24" placeholder="(27) 99999-9999"></label>
+        <label>Endereço / bairro (opcional) <input name="bairro" autocomplete="address-level3" maxlength="120"></label>
+        <label>Qual sua expectativa de investimento para a transformação do seu sorriso?
+          <select name="investimento" required><option value="">Selecione uma opção</option><option value="parcelamento">Buscar a melhor condição de parcelamento</option><option value="intermediario">Investimento intermediário</option><option value="premium">Planejando investimento premium</option></select>
+        </label>
+        <label class="consent"><input type="checkbox" name="consentimento" required> Autorizo o contato da equipe da Dra. Amanda Oscar por telefone ou WhatsApp sobre minha solicitação. Posso pedir a exclusão dos meus dados a qualquer momento.</label>
+        <label class="consent"><input type="checkbox" name="medicao"> Aceito o uso do Meta Pixel e do Google Analytics para medir minha visita e melhorar os anúncios. Esta escolha é opcional e não interfere no envio do cadastro.</label>
+        <label class="honeypot" aria-hidden="true">Não preencha este campo <input name="website" tabindex="-1" autocomplete="off"></label>
+        <input type="hidden" name="procedimento" value="Facetas em resina">
+        <input type="hidden" name="origem">
+        <button class="button button-gold" type="submit">Quero receber informações ↗</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
