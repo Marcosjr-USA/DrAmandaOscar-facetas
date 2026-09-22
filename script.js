@@ -116,6 +116,19 @@ form?.addEventListener('submit', async event => {
   const allowMeasurement = form.elements.medicao.checked;
   try { localStorage.setItem(consentKey, allowMeasurement ? 'accepted' : 'rejected'); } catch (_) { /* storage indisponível */ }
   if (allowMeasurement) { loadMetaPixel(); loadGoogleAnalytics(); }
-  form.action = LEAD_WEBHOOK_URL;
-  form.submit(); // POST nativo: evita CORS e mostra a confirmação retornada pelo Google.
+  try {
+    // Resposta opaca: este envio não permite confirmar a gravação na planilha.
+    await fetch(LEAD_WEBHOOK_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: new FormData(form)
+    });
+    status.textContent = 'Seu cadastro foi enviado. Nossa equipe falará com você em breve.';
+    form.reset();
+  } catch (error) {
+    status.textContent = 'Não foi possível enviar. Tente novamente ou fale pelo WhatsApp.';
+    console.error('Falha no envio do formulário:', error);
+  } finally {
+    button.disabled = false;
+  }
 });
