@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://marcosjr-usa.github.io/DrAmandaOscar-facetas/sitemap.xml
+Sitemap: https://facetas.dramandaoscar.com.br/sitemap.xml
