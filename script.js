@@ -125,7 +125,8 @@ form?.addEventListener('submit', async event => {
     });
     status.textContent = 'Seu cadastro foi enviado. Nossa equipe falará com você em breve.';
     form.reset();
-    window.setTimeout(closeExitModal, 5000);
+    // Mantém a confirmação visível por 3 segundos e fecha o pop-up suavemente.
+    window.setTimeout(closeExitModal, 3000);
   } catch (error) {
     status.textContent = 'Não foi possível enviar. Tente novamente ou fale pelo WhatsApp.';
     console.error('Falha no envio do formulário:', error);
